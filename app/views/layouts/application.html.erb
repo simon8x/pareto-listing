@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ParetoListings</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body id="body" class="overscroll-y-auto max-h-max relative">
+    <div class="absolute top-0 right-0 z-[-1] w-full h-auto">
+      <img src="<%= asset_path('shared/ez-bk.svg') %>"/>
+    </div>
+    
+    <%= render 'shared/header' %> 
+    
+    <div class="w-full bg-green-500 relative z-[-2]">
+      <img class="w-full h-auto" src="<%= asset_path('shared/hero-bg.png') %>"/>
+    </div>
+    
+    <main class="container mx-auto flex">
+    <%= yield %>
+    </main>
+    
+    <%= render 'shared/footer' %>
+    
+  </body>
+</html>

@@ -1,0 +1,362 @@
+<!-- ESTE ES EL BUSCADOR -->
+<form class="mx-auto width: fit-content; flex flex-wrap justify-center py-5 gap-x-4 ">
+  <div class="w-full lg:w-[45%]">
+    <div class="mt-2">
+        <label for="query" class="block text-xs font-medium leading-6 font-semibold text-dark">SEARCH</label>
+        <input 
+        placeholder="Search address, city, zip code, or area..." 
+        class="w-full border border-dark px-6 py-1.5 text-dark shadow-sm placeholder:text-dark placeholder:font-medium ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6" 
+        type="text" 
+        name="query" 
+        id="query" 
+        autocomplete="" >
+    </div>
+  </div>
+  <div class="w-full lg:w-[18%] flex gap-x-4">
+    <div class="grow mt-2 flex flex-col w-[48%]">
+        <label for="beds" class="block text-xs font-medium leading-6 font-semibold text-dark">BEDS</label>
+        <select id="beds" name="beds" 
+            class="w-full max-w-full border border-dark px-6 py-1.5 text-dark font-medium shadow-sm ring-1 ring-inset ring-main focus:ring-2 focus:ring-inset focus:ring-main m:text-sm sm:leading-6">
+          <option>Any</option>
+          <option>1 bed</option>
+          <option>2 beds</option>
+          <option>3 beds</option>
+          <option>4 beds</option>
+          <option>5 beds</option>
+          <option>6 beds</option>
+        </select>
+      </div>
+
+      <div class="grow mt-2 flex flex-col w-[48%]">
+        <label for="baths" class="block text-xs font-medium leading-6 font-semibold text-dark">BATHS</label>
+        <select id="baths" name="baths" 
+            class=" w-full max-w-full border border-dark px-6 py-1.5 text-dark font-medium shadow-sm ring-1 ring-inset ring-main focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+          <option>Any</option>
+          <option>1 bath</option>
+          <option>2 baths</option>
+          <option>3 baths</option>
+          <option>4 baths</option>
+        </select>
+      </div>
+  </div>
+  <div class="w-full lg:w-[22%] flex gap-x-4">
+    <div class="grow mt-2">
+      <label for="min" class="block text-xs font-medium leading-6 font-semibold text-dark">MIN PRICE</label>
+      <input 
+      placeholder="Min" 
+      type="text" 
+      name="min" 
+      id="min" 
+      class="w-full border border-dark px-6 py-1.5 text-dark shadow-sm placeholder:text-dark placeholder:font-medium ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+    </div>
+
+    <div class="grow mt-2">
+      <label for="max" class="block text-xs font-medium leading-6 font-semibold text-dark">MAX PRICE</label>
+      <input 
+      placeholder="Max" 
+      type="text" 
+      name="max" 
+      id="max" 
+      class="w-full border border-dark px-6 py-1.5 text-dark shadow-sm placeholder:text-dark placeholder:font-medium ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+    </div>
+  </div>
+  <div id="advanced-search" class="md:w-full lg:w-[88%] xl:w-[88.2]  2xl:w-[87.2%] mt-6 flex flex-wrap overflow-hidden
+    h-0 opacity-0 transition-all duration-100">
+    <h3 class="w-full text-2xl text-dark font-semibold mb-10">Advanced Search</h3>
+    <div class="w-full lg:w-[45%]">
+      <p class="color-dark text-xs font-bold">PROPERTY TYPE</p>
+      <div class="w-full mt-2.5 mb-5">
+        <div class="border-t-2 border-dark w-14"></div>
+      </div>
+      
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="single-family-deatached" name="single-family-deatached" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="single-family-deatached" class="font-semibold text-sm text-dark ">Single Family Deatached</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="condo-townhome" name="condo-townhome" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="condo-townhome" class="font-semibold text-sm text-dark ">Condo/Townhome</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="land" name="land" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="land" class="font-semibold text-sm text-dark ">Land</label>
+          </div>
+        </div>
+
+        <p class="color-dark text-xs font-bold mt-10">MUST HAVES</p>
+        <div class="w-full mt-2.5 mb-5">
+          <div class="border-t-2 border-dark w-14"></div>
+        </div>
+      <div class="columns-2">
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="pool" name="pool" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="pool" class="font-semibold text-sm text-dark ">Pool</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="dock" name="dock" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="dock" class="font-semibold text-sm text-dark ">Dock</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="water-view" name="water-view" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="water-view" class="font-semibold text-sm text-dark ">Water view</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="waterfront" name="waterfront" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="waterfront" class="font-semibold text-sm text-dark ">Waterfront</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="lakefront" name="lakefront" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="lakefront" class="font-semibold text-sm text-dark ">Lakefront</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="fireplace" name="fireplace" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="fireplace" class="font-semibold text-sm text-dark ">Fireplace</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="gated-community" name="gated-community" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="gated-community" class="font-semibold text-sm text-dark ">Gated Community</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="no-hoa" name="no-hoa" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="no-hoa" class="font-semibold text-sm text-dark ">No HOA</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="single-story" name="single-story" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="single-story" class="font-semibold text-sm text-dark ">Single Story</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="elevator" name="elevator" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="elevator" class="font-semibold text-sm text-dark ">Elevator</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="garage" name="garage" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="garage" class="font-semibold text-sm text-dark ">Garage</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6 pl-6">
+          <div class="flex h-5 items-center">
+            <input id="two-car-garage" name="two-car-garage" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="two-car-garage" class="font-semibold text-sm text-dark ">2 car garage</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6 pl-6">
+          <div class="flex h-5 items-center">
+            <input id="three-car-garage" name="three-car-garage" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="three-car-garage" class="font-semibold text-sm text-dark ">3 car garage</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="off-street-parking" name="off-street-parking" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="off-street-parking" class="font-semibold text-sm text-dark ">Off-street-parking</label>
+          </div>
+        </div>
+
+        <div class="relative flex gap-x-2.5 mb-6">
+          <div class="flex h-5 items-center">
+            <input id="new-construction" name="new-construction" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="new-construction" class="font-semibold text-sm text-dark ">New Construction</label>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="w-full lg:w-[55%] lg:mt-0">
+
+      <p  class="w-full block text-xs font-medium leading-6 font-semibold text-dark">SQUARE FOOTAGE</p>
+      <div class="w-full flex flex-col md:flex-row gap-x-4">
+        <div class="grow mt-1">
+            <input 
+            placeholder="Min" 
+            type="text" 
+            name="min-square" 
+            id="min-square" 
+            class="w-full border border-dark px-6 py-1.5 text-dark shadow-sm placeholder:text-dark placeholder:font-medium ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+          </div>
+
+          <div class="grow mt-1">
+            <input 
+            placeholder="Max" 
+            type="text" 
+            name="max-square" 
+            id="max-square" 
+            class="w-full border border-dark px-6 py-1.5 text-dark shadow-sm placeholder:text-dark placeholder:font-medium ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+          </div>
+      </div>
+
+      <p  class="w-full block text-xs font-medium leading-6 font-semibold text-dark mt-5">YEAR BUILT</p>
+      <div class="w-full flex flex-col md:flex-row gap-x-4">
+        <div class="grow mt-1">
+            <input 
+            placeholder="Min" 
+            type="text" 
+            name="min-year" 
+            id="min-year" 
+            class="w-full border border-dark px-6 py-1.5 text-dark shadow-sm placeholder:text-dark placeholder:font-medium ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+          </div>
+
+          <div class="grow mt-1">
+            <input 
+            placeholder="Max" 
+            type="text" 
+            name="max-year" 
+            id="max-year" 
+            class="w-full border border-dark px-6 py-1.5 text-dark shadow-sm placeholder:text-dark placeholder:font-medium ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+          </div>
+      </div>
+
+      <div class="grow mt-2 flex flex-col w-full">
+        <label for="new-to-market" class="block text-xs font-medium leading-6 font-semibold text-dark">NEW TO MARKET</label>
+        <select id="new-to-market" name="new-to-market" 
+            class=" w-full max-w-full border border-dark px-6 py-1.5 text-dark font-medium shadow-sm ring-1 ring-inset ring-main focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+          <option>Any</option>
+          <option>New</option>
+          <option>5 Years</option>
+          <option>10 Years</option>
+          <option>15 Years</option>
+          <option>20 Years</option>
+        </select>
+      </div>
+
+      <div class="w-full mt-2 flex flex-col md:flex-row md:items-center gap-x-6">
+        <div class="flex flex-col w-full md:w-[48%]">
+          <label for="min-lot-size" class="block text-xs font-medium leading-6 font-semibold text-dark">NEW TO MARKET</label>
+          <select id="min-lot-size" name="min-lot-size" 
+              class=" w-full max-w-full border border-dark px-6 py-1.5 text-dark font-medium shadow-sm ring-1 ring-inset ring-main focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+            <option>Any</option>
+            <option>1.000</option>
+            <option>10.000</option>
+            <option>20.000</option>
+            <option>50.000</option>
+          </select>
+        </div>
+        
+        <div class="relative mt-5 flex gap-x-2.5">
+          <div class="flex h-5 items-center">
+            <input id="price-change" name="price-change" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
+          </div>
+          <div class="text-sm leading-6">
+            <label for="price-change" class="font-semibold text-sm text-dark ">Price Change</label>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+  <div class="w-full lg:w-[88%] xl:w-[88.2]  2xl:w-[87.2%] mt-6
+    flex justify-between lg:justify-end gap-x-4 items-center">
+    <button id="advanced-search-trigger" class="text-sm text-mainh underline" onclick="showAdvancedSearch()">Advanced Search</button>
+    <button class="hidden lg:flex text-sm text-dark underline">Save Search</button>
+    <button class="text-white px-[50px] h-12 bg-mainh rounded-md">SEARCH</button>
+  </div>
+  <script>
+    function showAdvancedSearch(e){
+      event.preventDefault()
+      let advancedSearch = document.getElementById("advanced-search")
+      let advancedSearchTrigger = document.getElementById("advanced-search-trigger")
+      
+      advancedSearchTrigger.innerHTML === "Advanced Search" ?
+    (
+      advancedSearch.classList.remove('opacity-0'),
+      advancedSearch.classList.remove('h-0'),
+      advancedSearch.classList.add('opacity-100'),
+      advancedSearch.classList.add('h-full'),
+      advancedSearchTrigger.innerHTML = "Hide Advanced Search"
+    ):
+    (
+      advancedSearch.classList.remove('opacity-100'),
+      advancedSearch.classList.remove('h-full'),
+      advancedSearch.classList.add('opacity-0'),
+      advancedSearch.classList.add('h-0'),
+      advancedSearchTrigger.innerHTML = "Advanced Search"
+    );
+
+      
+    }
+  </script>
+
+</form>

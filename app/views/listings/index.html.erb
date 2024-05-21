@@ -1,0 +1,120 @@
+<div class="w-full px-5 md:px-0 lg:px-0">
+
+  <!-- UNCOMENT TO SEE NEW LISTING LINK -->
+  <!-- <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Listings</h1>
+    <%= link_to "New listing", new_listing_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div> -->
+
+  <!-- CITY HEADER -->
+  <div class="md:w-full flex flex-wrap items-center lg:mb-14 mt-11">
+    <div class="md:w-full lg:w-4/12">
+      <h3 class="text-[#454545] text-2xl font-extralight  leading-9 lg:text-xl lg:leading-10 font-inter">Your resource for homes and real estate in</h3>
+      <h2 class="text-[65px] text-[#454545] font-bold font-inter">Atlanta, GA</h2>
+    </div>
+    <p id="city-description" class=" text-base leading-7 font-normal line-clamp-4	md:line-clamp-none md:w-full lg:w-8/12 md:text-sm text-black md:leading-6 lg:px-20 font-inter">
+      The heart of downtown is swimming with exciting nightlife, world-famous attractions, and historic landmarks; the surrounding neighborhoods offer unique, local businesses that reflect the individual character of each area. In the midst of all the urban city activities, Atlanta real estate is also surrounded by a variety of parks, gardens, and green spaces. When it comes to Georgia Real Estate in an active city, it doesn’t get more vibrant than Atlanta.
+    </p>
+    <button id="rm-btn" class="md:hidden text-action font-bold text-base" onclick="showDescription()">Read more</button>
+  </div>
+
+  <!-- SEARCH CONTROLLER -->
+  <div class="py-7">
+    <%= render 'search' %>
+  </div>
+  
+  <!-- LISTING CONTROLS -->
+  <div class="w-full my-3 flex justify-between items-center">
+    <button class="h-full bg-chip px-3.5 py-2 rounded text-white text-[15px]"><strong>6,799 </strong> Listings</button>
+    <div class="flex gap-4">
+      <button class="hidden h-full border-2 border-mainh bg-mainh px-3.5 py-2 rounded text-white text-[15px] text-nowrap font-bold px-8 md:flex">SAVE SEARCH</button>
+      <button class="hidden h-full border-2 border-mainh px-3.5 py-2 rounded text-[15px] text-nowrap text-mainh font-bold px-5 md:flex">SHARE</button>
+      <select id="baths" name="baths" 
+          class=" w-full max-w-full border border-dark px-8 py-1.5 text-dark font-medium shadow-sm ring-1 ring-inset ring-main focus:ring-2 focus:ring-inset focus:ring-main sm:text-sm sm:leading-6">
+        <option>Newest Listings</option>
+        <option>Oldest Listings</option>
+        <option>Popular Listings</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- LISTINGS BODY -->
+  <div id="listings" class="min-w-full grid gap-x-5 gap-y-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <% @listings.each do |listing| %>
+      <%= render listing %>
+    <% end %>
+  </div>
+
+  <!-- PAGINATOR -->
+  <ul class="w-full my-11 flex justify-center gap-0.5">
+    <li><a class="text-white font-bold text-sm px-3 py-2.5 bg-dark hover:bg-main hover:text-white transition delay-150 duration-300 ease-in-out">1</a></li>
+    <li><a href="#"class="text-dark font-bold text-sm px-3 py-2.5 hover:bg-main hover:text-white transition delay-150 duration-300 ease-in-out">2</a></li>
+    <li><a href="#"class="text-dark font-bold text-sm px-3 py-2.5 hover:bg-main hover:text-white transition delay-150 duration-300 ease-in-out">3</a></li>
+    <li><a href="#"class="text-dark font-bold text-sm px-3 py-2.5 hover:bg-main hover:text-white transition delay-150 duration-300 ease-in-out">NEXT</a></li>
+  </ul>
+
+  <div class="w-full border-t-[6px] border-main"></div>
+
+  <!-- BREADCRUMB -->
+  <ul class="w-full my-8 flex justify-center gap-0.5">
+    <li><a href="#" class="font-normal text-base px-3 py-2.5 text-action">For Sale</a></li>
+    <li><span class="font-extralight">&gt;</span></li>
+    <li><a href="#" class="font-normal text-base px-3 py-2.5 text-action">Georgia</a></li>
+    <li><span class="font-extralight">&gt;</span></li>
+    <li><a class="font-normal text-base px-3 py-2.5 text-dark">Atlanta</a></li>
+  </ul>
+
+  <!-- SHORTCUTS -->
+  <div class="bg-dark py-16 px-10 w-full mb-20">
+    <ul class="w-full columns-1 md:columns-2 lg:columns-4">
+      <li>
+        <h4 class="text-white text-[22px] font-bold">Nearby Real Estate</h4>
+        <ul class="mt-4">
+          <li class="text-main font-normal mb-2"> <a href="#">Open Houses Near Me</a></li>
+          <li class="text-main font-normal mb-2"> <a href="#">Land for Sale Near Me</a></li>
+          <li class="text-main font-normal mb-2"> <a href="#">Townhomes for Sale Near Me</a></li>
+          <li class="text-main font-bold mb-2"> <a href="#">See All</a></li>
+        </ul>
+      </li>
+
+      <li class="mt-8 lg:mt-0">
+        <h4 class="text-white text-[22px] font-bold">Nearby Zip Codes</h4>
+        <ul class="mt-4">
+          <li class="text-main font-normal mb-2"> <a href="#">31198</a></li>
+          <li class="text-main font-normal mb-2"> <a href="#">30314</a></li>
+          <li class="text-main font-normal mb-2"> <a href="#">31191</a></li>
+          <li class="text-main font-bold mb-2"> <a href="#">See All</a></li>
+        </ul>
+      </li>
+      
+      <li class="mt-8 md:mt-0 lg:mt-0">
+        <h4 class="text-white text-[22px] font-bold">Atlanta Neighborhoods</h4>
+        <ul class="mt-4">
+          <li class="text-main font-normal mb-2"> <a href="#">Bankhead</a></li>
+          <li class="text-main font-normal mb-2"> <a href="#">Vine City</a></li>
+          <li class="text-main font-normal mb-2"> <a href="#">Atlanta University Center</a></li>
+          <li class="text-main font-bold mb-2"> <a href="#">See All</a></li>
+        </ul>
+      </li>
+
+      <li class="mt-8 lg:mt-0">
+        <h4 class="text-white text-[22px] font-bold">Atlanta Property Types</h4>
+        <ul class="mt-4">
+          <li class="text-main font-normal mb-2"> <a href="#">For Sale by Owner (FSBO)</a></li>
+          <li class="text-main font-normal mb-2"> <a href="#">Single Family Homes</a></li>
+          <li class="text-main font-normal mb-2"> <a href="#">Condos</a></li>
+          <li class="text-main font-bold mb-2"> <a href="#">See All</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function showDescription(){
+      let description = document.getElementById("city-description");
+      let rmBtn = document.getElementById("rm-btn");
+      description.classList.remove("line-clamp-4")
+      rmBtn.classList.add("hidden")
+    }
+  </script>
+</div>
