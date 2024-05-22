@@ -1,7 +1,7 @@
 <!-- ESTE ES EL BUSCADOR -->
 <form class="mx-auto width: fit-content; flex flex-wrap justify-center py-5 gap-x-4 ">
   <div class="w-full lg:w-[45%]">
-    <div class="mt-2">
+    <div class="mt-2 relative">
         <label for="query" class="block text-xs font-medium leading-6 font-semibold text-dark">SEARCH</label>
         <input 
         placeholder="Search address, city, zip code, or area..." 
@@ -10,6 +10,10 @@
         name="query" 
         id="query" 
         autocomplete="" >
+        <div class="h-5 absolute top-0 right-0 flex justify-end gap-x-1 hover:cursor-pointer">
+          <img class="max-h-5" src="<%= asset_path('shared/bullseye.svg') %>" />
+          <p class="text-nowrap text-xs font-medium leading-6 font-semibold text-mainh">NEAR ME</p>
+        </div>
     </div>
   </div>
   <div class="w-full lg:w-[18%] flex gap-x-4">
@@ -69,7 +73,7 @@
         <div class="border-t-2 border-dark w-14"></div>
       </div>
       
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="single-family-deatached" name="single-family-deatached" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -78,7 +82,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="condo-townhome" name="condo-townhome" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -87,7 +91,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="land" name="land" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -101,7 +105,7 @@
           <div class="border-t-2 border-dark w-14"></div>
         </div>
       <div class="columns-2">
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="pool" name="pool" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -110,7 +114,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="dock" name="dock" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -119,7 +123,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="water-view" name="water-view" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -128,7 +132,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="waterfront" name="waterfront" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -137,7 +141,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="lakefront" name="lakefront" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -146,7 +150,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="fireplace" name="fireplace" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -155,7 +159,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="gated-community" name="gated-community" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -164,7 +168,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="no-hoa" name="no-hoa" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -173,7 +177,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="single-story" name="single-story" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -182,7 +186,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="elevator" name="elevator" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -191,7 +195,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="garage" name="garage" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -200,7 +204,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6 pl-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1 pl-6">
           <div class="flex h-5 items-center">
             <input id="two-car-garage" name="two-car-garage" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -209,7 +213,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6 pl-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1 pl-6">
           <div class="flex h-5 items-center">
             <input id="three-car-garage" name="three-car-garage" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -218,7 +222,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="off-street-parking" name="off-street-parking" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
@@ -227,7 +231,7 @@
           </div>
         </div>
 
-        <div class="relative flex gap-x-2.5 mb-6">
+        <div class="relative flex gap-x-2.5 mb-6 ml-1">
           <div class="flex h-5 items-center">
             <input id="new-construction" name="new-construction" type="checkbox" class="h-4 w-4 rounded border-dark text-mainh focus:ring-mainh">
           </div>
