@@ -1,0 +1,20 @@
+# Exported from Render on 2024-05-22T14:30:40Z
+services:
+- type: web
+  name: pareto-listing
+  runtime: docker
+  repo: https://github.com/simon8x/pareto-listing
+  plan: free
+  envVars:
+  - key: REDIS_URL
+    sync: false
+  - key: WEB_CONCURRENCY
+    sync: false
+  - key: RAILS_MASTER_KEY
+    sync: false
+  - key: DATABASE_URL
+    sync: false
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+version: "1"
