@@ -1,15 +1,14 @@
 <article id="<%= dom_id listing %>" class="w-full border-b-[5px] border-main">
   <div class="relative mb-2.5">
-    <img 
+    <img
       class="w-full h-auto"
       src="<%= image_path("#{listing.image_url}") %>" alt=""
     />
-
-    <div class="absolute top-5 right-5 w-10 h-10 bg-dark rounded-full flex items-center justify-center hover:cursor-pointer transition duration-200 hover:shadow-inner ease-in-out trasnform hover:scale-110">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none" >
-        <path fill="white" stroke="#000112" d="M10.217 18.9204L10.2171 18.9205C10.6243 19.2938 11.1596 19.5 11.7143 19.5C12.269 19.5 12.8043 19.2938 13.2115 18.9205L13.2115 18.9204L20.7738 11.9856L20.4364 11.6166L20.7743 11.9851L20.7742 11.9852C22.1492 10.7277 22.9286 8.96224 22.9286 7.11508V6.87665C22.9286 3.75167 20.6312 1.09805 17.5123 0.586715L17.5121 0.586696C15.4479 0.248766 13.3454 0.910724 11.8661 2.36371C11.7818 2.44652 11.6467 2.44652 11.5624 2.36371C10.0832 0.910724 7.98064 0.248766 5.91643 0.586696L5.91632 0.586715C2.79741 1.09805 0.5 3.75167 0.5 6.87665V7.11508C0.5 8.9623 1.27944 10.7278 2.65446 11.9853C2.65457 11.9854 2.65467 11.9855 2.65478 11.9856L10.217 18.9204ZM17.4314 1.08012L17.4314 1.08013L17.4314 1.08012Z"/>
-        </svg>
-    </div>
+     <button id="button_<%= listing.id %>" onclick="favItem(this)" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-white">
+      <svg width="40px" height="40px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#262936" fill-rule="evenodd" clip-rule="evenodd" d="M0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5ZM4.14635 5.14648C4.8939 4.39893 6.10591 4.39893 6.85346 5.14648L7.49991 5.79292L8.14635 5.14648C8.8939 4.39893 10.1059 4.39893 10.8535 5.14648C11.601 5.89402 11.601 7.10603 10.8535 7.85358L7.49991 11.2071L4.14635 7.85358C3.39881 7.10604 3.39881 5.89402 4.14635 5.14648Z" />
+      </svg>
+    </button> 
     <span class="px-4 py-2 absolute bottom-0 right-0 bg-new uppercase font-semibold text-xs">newly listed</span>
   </div>
   <span class="text-[28px]">
@@ -32,4 +31,21 @@
     <p>
       <%= link_to "Show this listing", listing, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     </p> -->
+
+    <script>
+
+    function favItem(button) {
+      const activeColor = 'green';
+      const inactiveColor = 'white';
+      
+      if (button.style.backgroundColor === activeColor) {
+        button.style.backgroundColor = inactiveColor;
+      } else {
+        button.style.backgroundColor = activeColor;
+        button.firstElementChild.
+        console.log({button})
+      }
+    }
+      
+    </script>
 </article>
